@@ -1,0 +1,6 @@
+streamlit
+streamlit_theme
+numpy
+pandas
+datetime
+xgboost
