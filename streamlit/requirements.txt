@@ -5,4 +5,4 @@ pandas
 datetime
 xgboost
 PIL
-sklearn
+scikit-learn

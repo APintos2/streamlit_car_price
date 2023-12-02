@@ -6,6 +6,7 @@ import datetime
 import xgboost as xgb
 import pickle
 from PIL import Image
+import sklearn
 
 # Streamlit se ejecuta siempre desde scripts (.py) y desde el cmd en la carpeta donde está el .py y con el conda activate eda_env ejecutado antes
 # pip install streamlit en la terminal
