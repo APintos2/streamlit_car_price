@@ -8,7 +8,7 @@ import pickle
 
 # Streamlit se ejecuta siempre desde scripts (.py) y desde el cmd en la carpeta donde está el .py y con el conda activate eda_env ejecutado antes
 # pip install streamlit en la terminal
-# Para lanzar la web ejecutar el comando: "streamlit run st_app.py". Después se actualiza en la web en un botón cada vez que guardamos el .py
+# Para lanzar la web ejecutar el comando: "streamlit run streamlit_app.py". Después se actualiza en la web en un botón cada vez que guardamos el .py
 
 # Función para cargar modelos y datos
 def cargar_modelos_datos():
