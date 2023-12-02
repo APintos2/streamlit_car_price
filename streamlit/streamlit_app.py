@@ -5,6 +5,7 @@ import pandas as pd
 import datetime
 import xgboost as xgb
 import pickle
+from PIL import Image
 
 # Streamlit se ejecuta siempre desde scripts (.py) y desde el cmd en la carpeta donde está el .py y con el conda activate eda_env ejecutado antes
 # pip install streamlit en la terminal
@@ -115,7 +116,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-image_path = "autos_pintos_logo_red.png"
+image_path = Image.open("./utils/autos_pintos_logo_red.png")
 st.image(image_path, width=300)
 
 st.header("Bienvenid@ a Autos Pintos App")
