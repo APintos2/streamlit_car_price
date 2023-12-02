@@ -3,5 +3,5 @@ numpy
 pandas
 datetime
 xgboost
-PIL
+Pillow
 scikit-learn
