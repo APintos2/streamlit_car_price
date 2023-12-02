@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit_theme as stt
 import numpy as np
 import pandas as pd
 import datetime
@@ -7,15 +8,15 @@ import pickle
 
 # Streamlit se ejecuta siempre desde scripts (.py) y desde el cmd en la carpeta donde está el .py y con el conda activate eda_env ejecutado antes
 # pip install streamlit en la terminal
-# Para lanzar la web ejecutar el comando: "streamlit run st_app.py". Después se actualiza en la web en un botón cada vez que guardamos el .py
+# Para lanzar la web ejecutar el comando: "streamlit run streamlit_app.py". Después se actualiza en la web en un botón cada vez que guardamos el .py
 
 # Función para cargar modelos y datos
 def cargar_modelos_datos():
-    loaded_model = pickle.load(open("../model/modelo_final.pkl", 'rb'))
-    make_model_set = pickle.load(open("../utils/make_model_set.pkl", 'rb'))
-    encoder_make = pickle.load(open("../utils/label_encoder_make.pkl", 'rb'))
-    encoder_model = pickle.load(open("../utils/label_encoder_model.pkl", 'rb'))
-    scaler = pickle.load(open("../utils/scaler.pkl", 'rb'))
+    loaded_model = pickle.load(open("./utils/modelo_final.pkl", 'rb'))
+    make_model_set = pickle.load(open("./utils/make_model_set.pkl", 'rb'))
+    encoder_make = pickle.load(open("./utils/label_encoder_make.pkl", 'rb'))
+    encoder_model = pickle.load(open("./utils/label_encoder_model.pkl", 'rb'))
+    scaler = pickle.load(open("./utils/scaler.pkl", 'rb'))
 
     return loaded_model, make_model_set, encoder_make, encoder_model, scaler
 
@@ -23,7 +24,9 @@ def cargar_modelos_datos():
 def calculadora_precios():
     make = st.selectbox('Marca del coche:', sorted(list(make_model_set.keys())))
     model = st.selectbox('Modelo del coche:', sorted(make_model_set[make]))
-    fuel = st.selectbox('Combustible:', ('Diésel', 'Gasolina', 'Híbrido', 'Eléctrico', 'Híbrido enchufable', 'Gas licuado (GLP)', 'Gas natural (CNG)'))
+    #fuel = st.selectbox('Combustible:', ('Diésel', 'Gasolina', 'Híbrido', 'Eléctrico', 'Híbrido enchufable', 'Gas licuado (GLP)', 'Gas natural (CNG)'))
+    fuel = st.radio('Combustible:', options=['Diésel', 'Gasolina', 'Híbrido', 'Eléctrico', 'Híbrido enchufable', 'Gas licuado (GLP)', 'Gas natural (CNG)'], 
+          horizontal=True)
     year = st.number_input('Año de matriculación:', 1980, date_time.year,  step=1)
     kms = st.number_input('Número de kilómetros:', 0, 500000, step=1000)
     power = st.number_input('Potencia (CV):', 0, 500, step=20)
@@ -89,6 +92,7 @@ def calculadora_precios():
             prediction = loaded_model.predict(data_new)
             if prediction>0:
                 st.balloons()
+                st.snow()
                 prediction = np.exp(prediction)
                 st.success(f'El precio estimado del coche es de {prediction[0].round(0)} euros.')
             else:
@@ -111,19 +115,25 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-st.header("Bienvenid@ a Autos Pintos App")
-st.sidebar.text("Menu")
-
 image_path = "../img/autos_pintos_logo_red.png"
 st.image(image_path, width=300)
 
-home = st.sidebar.button("Home")
-data = st.sidebar.button("Data")
-calculadora = st.sidebar.button("Calculadora")
+st.header("Bienvenid@ a Autos Pintos App")
+
+st.subheader("Introduce las características del coche para predecir su precio:")
+
+# st.sidebar.text("Menu")
+
+# image_path = "../img/banner.png"
+# st.image(image_path, width=300)
+
+# home = st.sidebar.button("Home")
+# data = st.sidebar.button("Data")
+# calculadora = st.sidebar.button("Calculadora")
 
 loaded_model, make_model_set, encoder_make, encoder_model, scaler = cargar_modelos_datos()
 calculadora_precios()  # Llamada a la función
 
 
-if st.button('Recargar Página'):
-    st.rerun()
+# if st.button('Recargar Página'):
+#     st.rerun()
