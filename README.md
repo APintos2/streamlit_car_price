@@ -22,7 +22,7 @@ Además, se hace un despliegue de una Web App predictora de precios en Streamlit
 
 ## Métricas.
 
-Las métricas utilizadas para la elección del modelo en este problema de regresión es:
+Las métrica principal utilizada para la elección del modelo en este problema de regresión es:
 
 * [__Mean Squared Error (MSE).__](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_squared_error.html)
 
