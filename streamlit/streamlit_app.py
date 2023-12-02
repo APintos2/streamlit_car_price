@@ -95,7 +95,7 @@ def calculadora_precios():
                 st.balloons()
                 st.snow()
                 prediction = np.exp(prediction)
-                st.success(f'El precio estimado del coche es de {prediction[0].round(0)} euros.')
+                st.success(f'El precio estimado del coche es de {round(prediction[0])} euros.')
             else:
                 st.warning("No puedes vender este coche.")
     except:
