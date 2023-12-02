@@ -4,3 +4,4 @@ numpy
 pandas
 datetime
 xgboost
+PIL
