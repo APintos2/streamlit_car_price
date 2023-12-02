@@ -101,10 +101,6 @@ def calculadora_precios():
     except:
         st.warning("Ups!! Algo ha salido mal.\nPrueba de nuevo.")
 
-    # if st.button('Recargar Página'):
-    #     st.rerun()
-    #     st.session_state.clear()
-
 
 # Streamlit app
 date_time = datetime.datetime.now()
@@ -133,6 +129,6 @@ loaded_model, make_model_set, encoder_make, encoder_model, scaler = cargar_model
 calculadora_precios()  # Llamada a la función
 
 
-if st.button('Recargar Página'):
-    st.rerun()
-    st.session_state.clear()
+# if st.button('Recargar Página'):
+#     st.rerun()
+#     st.session_state.clear()
