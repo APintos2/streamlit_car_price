@@ -51,9 +51,13 @@ El proyecto contiene las siguientes carpetas:
 
 5. src/notebooks/car_price_project.ipynb: notebook principal (memoria) del proyecto.
 
-6. utils: contiene la Web App en Streamlit (atreamlit_app.py), así como los archivos necesarios para el procesado de datos y el desarrollo del proyecto.
+6. streamlit: contiene la Web App en Streamlit (streamlit_app.py), así como los archivos necesarios para que esta funcione.
 
+7. utils: contiene los archivos necesarios para el procesado de datos y el desarrollo del proyecto.
 
+## Link a la Web App en Streamlit.
+
+[https://appcarprice-apintos2.streamlit.app/](https://appcarprice-apintos2.streamlit.app/)
 
 
 
