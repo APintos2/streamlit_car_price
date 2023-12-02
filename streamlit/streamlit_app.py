@@ -12,11 +12,11 @@ import pickle
 
 # Función para cargar modelos y datos
 def cargar_modelos_datos():
-    loaded_model = pickle.load(open("./utils/modelo_final.pkl", 'rb'))
-    make_model_set = pickle.load(open("./utils/make_model_set.pkl", 'rb'))
-    encoder_make = pickle.load(open("./utils/label_encoder_make.pkl", 'rb'))
-    encoder_model = pickle.load(open("./utils/label_encoder_model.pkl", 'rb'))
-    scaler = pickle.load(open("./utils/scaler.pkl", 'rb'))
+    loaded_model = pickle.load(open("modelo_final.pkl", 'rb'))
+    make_model_set = pickle.load(open("make_model_set.pkl", 'rb'))
+    encoder_make = pickle.load(open("label_encoder_make.pkl", 'rb'))
+    encoder_model = pickle.load(open("label_encoder_model.pkl", 'rb'))
+    scaler = pickle.load(open("scaler.pkl", 'rb'))
 
     return loaded_model, make_model_set, encoder_make, encoder_model, scaler
 
@@ -115,7 +115,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-image_path = "./utils/autos_pintos_logo_red.png"
+image_path = "autos_pintos_logo_red.png"
 st.image(image_path, width=300)
 
 st.header("Bienvenid@ a Autos Pintos App")
