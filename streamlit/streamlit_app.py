@@ -136,5 +136,5 @@ loaded_model, make_model_set, encoder_make, encoder_model, scaler = cargar_model
 calculadora_precios()  # Llamada a la función
 
 
-# if st.button('Recargar Página'):
-#     st.rerun()
+if st.button('Recargar Página'):
+    st.rerun()
