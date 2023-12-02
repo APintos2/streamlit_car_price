@@ -1,8 +1,7 @@
 streamlit
-streamlit_theme
 numpy
 pandas
 datetime
 xgboost
 PIL
-scikit-learn==1.3.2
+# scikit-learn==1.3.2
