@@ -125,9 +125,6 @@ st.subheader("Introduce las características del coche para predecir su precio:"
 
 # st.sidebar.text("Menu")
 
-# image_path = "../img/banner.png"
-# st.image(image_path, width=300)
-
 # home = st.sidebar.button("Home")
 # data = st.sidebar.button("Data")
 # calculadora = st.sidebar.button("Calculadora")
@@ -138,3 +135,4 @@ calculadora_precios()  # Llamada a la función
 
 if st.button('Recargar Página'):
     st.rerun()
+    st.session_state.clear()
