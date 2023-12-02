@@ -116,7 +116,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-image_path = Image.open("autos_pintos_logo_red.png")
+image_path = Image.open("./streamlit/autos_pintos_logo_red.png")
 st.image(image_path, width=300)
 
 st.header("Bienvenid@ a Autos Pintos App")
