@@ -47,9 +47,9 @@ El proyecto contiene las siguientes carpetas:
 
 3. model: contiene los modelos guardados creados en el notebook principal.
 
-4. src/notebooks/pruebas: notebooks de limpieza, procesado, EDA y pruebas de modelos de Machine Learning y Deep Learning.
+4. notebooks/pruebas: notebooks de limpieza, procesado, EDA y pruebas de modelos de Machine Learning y Deep Learning.
 
-5. src/notebooks/car_price_project.ipynb: notebook principal (memoria) del proyecto.
+5. notebooks/car_price_project.ipynb: notebook principal (memoria) del proyecto.
 
 6. streamlit: contiene la Web App en Streamlit (streamlit_app.py), así como los archivos necesarios para que esta funcione.
 
