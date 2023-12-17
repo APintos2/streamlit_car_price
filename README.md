@@ -20,17 +20,17 @@ Además, se hace un despliegue de una Web App predictora de precios en Streamlit
 6. Extracción de conclusiones y propuestas de mejora.
 7. Despliegue de Web App en Streamlit (adicional).
 
-## Métricas.
+## Métricas obtenidas.
 
-Las métrica principal utilizada para la elección del modelo en este problema de regresión es:
+Las métrica principal utilizada en la optimización del modelo en este problema de regresión es:
 
 * [__Mean Squared Error (MSE).__](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_squared_error.html)
 
-Además, se han obtenido otras métricas, como:
+Además, se han obtenido otras métricas (resultados de test) que podemos interpretar, como:
 
-* [__Mean Absolute Error (MAE).__](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_error.html)
-* [__Mean Absolute Percentage Error (MAPE).__](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_percentage_error.html#sklearn.metrics.mean_absolute_percentage_error)
-* [__r2 Score.__](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html#sklearn.metrics.r2_score)
+* [__Mean Absolute Error (MAE).__](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_error.html) MAE = 2058 euros. Esto significa que para cada vehículo nos podemos ir esa cantidad de dinero de media en la predicción.
+* [__Mean Absolute Percentage Error (MAPE).__](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_percentage_error.html#sklearn.metrics.mean_absolute_percentage_error) En cuanto al MAPE, el modelo tiene un % de error medio del 14.78 % sobre el precio del vehículo.
+* [__r2 Score.__](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html#sklearn.metrics.r2_score) r2 score = 0.93, de modo que el modelo suele ajustarse bien a datos con los que no ha sido entrenado.
 
 
 ## Tecnologías utilizadas.
